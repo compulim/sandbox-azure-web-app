@@ -15,7 +15,8 @@
     "rebuild": "gulp rebuild",
     "repack": "gulp repack",
     "start": "node lib/app.js",
-    "postinstall": "npm install --ignore-scripts --only=development && gulp build"
+    "postinstall": "if-env installing=1 && echo>nul || npm run postinstall:continue",
+    "postinstall:continue": "set-env installing=1 npm install --only=development && gulp build"
   },
   "dependencies": {
     "commander": "^2.9.0",
@@ -23,8 +24,10 @@
     "debug": "^2.2.0",
     "deep-assign": "^2.0.0",
     "express": "^4.14.0",
+    "if-env": "^1.0.0",
     "qs": "^6.3.0",
-    "serve-static": "^1.11.1"
+    "serve-static": "^1.11.1",
+    "set-env": "^1.0.0"
   },
   "devDependencies": {
     "babel-core": "^6.18.2",
