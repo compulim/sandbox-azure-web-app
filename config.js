@@ -3,13 +3,13 @@
 const { platform } = require('os');
 const { join }     = require('path');
 
-const SOURCE_DIR                 = __dirname;
-const SOURCE_PUBLIC_DIR          = join(SOURCE_DIR, 'public/');
-const SOURCE_ROLLUP_CONFIG_FILE  = join(SOURCE_PUBLIC_DIR, 'rollup.config.js');
-const SOURCE_WEBPACK_CONFIG_FILE = join(SOURCE_PUBLIC_DIR, 'webpack.config.js');
-const SOURCE_STATIC_FILES_DIR    = join(SOURCE_PUBLIC_DIR, 'files/');
-const SOURCE_JS_DIR              = join(SOURCE_PUBLIC_DIR, 'lib/');
-const SOURCE_SERVER_DIR          = join(SOURCE_DIR, 'lib/');
+const SOURCE_DIR                    = __dirname;
+const SOURCE_PUBLIC_DIR             = join(SOURCE_DIR, 'public/');
+const SOURCE_ROLLUP_CONFIG_FILE     = join(SOURCE_PUBLIC_DIR, 'rollup.config.js');
+const SOURCE_WEBPACK_CONFIG_FILE    = join(SOURCE_PUBLIC_DIR, 'webpack.config.js');
+const SOURCE_STATIC_FILES_DIR       = join(SOURCE_PUBLIC_DIR, 'files/');
+const SOURCE_JS_DIR                 = join(SOURCE_PUBLIC_DIR, 'lib/');
+const SOURCE_SERVER_DIR             = join(SOURCE_DIR, 'lib/');
 
 const DEST_DIR                      = join(__dirname, 'dist/');
 const DEST_PACKAGE_FILE             = join(DEST_DIR, 'packages/web.zip');
