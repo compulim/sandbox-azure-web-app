@@ -16,7 +16,7 @@
     "repack": "gulp repack",
     "start": "node lib/app.js",
     "postinstall": "if-env installing=1 && echo>nul || npm run postinstall:continue",
-    "postinstall:continue": "set-env installing=1 npm install --only=development && gulp build"
+    "postinstall:continue": "set-env installing=1 npm install --only=development || gulp build"
   },
   "dependencies": {
     "commander": "^2.9.0",
