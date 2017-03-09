@@ -88,7 +88,8 @@
           "type": "config",
           "name": "appsettings",
           "dependsOn": [
-            "[resourceId('Microsoft.Web/Sites', parameters('siteName'))]"
+            "[resourceId('Microsoft.Web/Sites', parameters('siteName'))]",
+            "[concat('Microsoft.Web/Sites/', parameters('siteName'), '/config/web')]"
           ],
           "properties": {
             "NPM_CONFIG_BUNDLER": "rollup",
@@ -101,7 +102,7 @@
           "type": "sourcecontrols",
           "dependsOn": [
             "[resourceId('Microsoft.Web/Sites', parameters('siteName'))]",
-            "[concat('Microsoft.Web/Sites/', parameters('siteName'), '/config/web')]"
+            "[concat('Microsoft.Web/Sites/', parameters('siteName'), '/config/appsettings')]"
           ],
           "properties": {
             "RepoUrl": "[parameters('repoUrl')]",
