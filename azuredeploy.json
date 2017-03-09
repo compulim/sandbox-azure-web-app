@@ -91,7 +91,7 @@
             "[resourceId('Microsoft.Web/Sites', parameters('siteName'))]"
           ],
           "properties": {
-            "NPM_CONFIG_BUNDLER": "webpack",
+            "NPM_CONFIG_BUNDLER": "rollup",
             "WEBSITE_NODE_DEFAULT_VERSION": "6.9.1"
           }
         },
